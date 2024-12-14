@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Outfit:wght@100..900&display=swap');
+
+.navbar {
+    display: flex;
+    padding: 10px;
+    color: #ffffff;
+    background-color: black;
+    justify-content: center;
+  }
+
+  .navbar-items {
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.navbar .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar .left p {
+  font-family: "Just Another Hand", cursive;
+  font-size: 50px;
+}
+
+.navbar .left img {
+  width: 50px;
+}
+
+.navbar .right ul {
+  display: flex; 
+  align-items: center;
+  gap: 20px;
+  font-weight: 400;
+}
+
+.navbar .right ul li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.navbar .right a {
+  text-decoration: none;
+  color: #C9C9C9;
+}
+
+.navbar .right a:active {
+  color: #ffffff;
+}
+
+.navbar .right a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+
+  .navbar .left p {
+    font-size: 30px;
+  }
+
+  .navbar .left img {
+    width: 30px;
+  }
+
+  .navbar .right ul li{
+    display: none;
+    font-size: 20px;
+  }
+  
+}
