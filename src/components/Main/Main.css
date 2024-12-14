@@ -3,7 +3,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #ffffff;
     align-items: center;
     background-color: black;
 }
