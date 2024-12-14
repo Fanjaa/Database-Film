@@ -179,7 +179,6 @@ const Main = () => {
         );
       };
     
-console.log({searchMovies})
   return (
     <div className='main'>
 
