@@ -1,19 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Just+Another+Hand&family=Outfit:wght@100..900&display=swap');
 
 .navbar {
-    display: flex;
-    padding: 10px;
-    color: #ffffff;
-    background-color: black;
-    justify-content: center;
-  }
+  position: fixed;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  color: #ffffff;
+  justify-content: center;
+  z-index: 999;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
 
-  .navbar-items {
-    display: flex;
-    width: 90vw;
-    justify-content: space-between;
-    align-items: center;
-  }
+.navbar-items {
+  display: flex;
+  width: 90vw;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  backdrop-filter: blur(10px);
+
+}
 
 .navbar .left {
     display: flex;
@@ -30,10 +37,20 @@
   width: 50px;
 }
 
-.navbar .right ul {
-  display: flex; 
+.right-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.right-menu {
+  display: flex;
   align-items: center;
   gap: 20px;
+  list-style: none;
   font-weight: 400;
 }
 
@@ -56,7 +73,17 @@
   color: #ffffff;
 }
 
+.navbar .right .active {
+  color: white; /* Teks berubah warna putih saat aktif */
+  font-weight: bold;
+}
+
+
 @media (max-width: 600px) {
+  .navbar {
+    background-color: black;
+    backdrop-filter: none;
+  }
 
   .navbar .left p {
     font-size: 30px;
@@ -66,9 +93,34 @@
     width: 30px;
   }
 
-  .navbar .right ul li{
-    display: none;
+  .right-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
     font-size: 20px;
   }
-  
+
+  .navbar .right ul li {
+    font-size: 18px;
+  }
+
+  .right-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 47px;
+    right: 0px;
+    border-radius: 0 0 5px 5px;
+    padding: 10px 10px 20px 10px;
+    width: 150px;
+    z-index: 1000;
+    background-color: black;
+    
+  }
+
+  .right-menu.open {
+    display: flex;
+    display: none;
+    color: white;
+  } 
 }

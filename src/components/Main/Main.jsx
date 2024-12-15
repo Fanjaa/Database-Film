@@ -12,7 +12,7 @@ const Main = () => {
   const [upcomingMovies, setUpcomingMovies] = useState([])
   const [searchMovies, setSearchMovies] = useState([])
   const [inputLength, setInputLength] = useState(0);
-  
+
   const gridRef = useRef(null);
   const gridRefUpcoming = useRef(null);
 
@@ -178,6 +178,7 @@ const Main = () => {
           </>
         );
       };
+
     
   return (
     <div className='main'>
@@ -187,7 +188,7 @@ const Main = () => {
           <div className='box-left'>
             <h2>FIND MOVIES</h2>
             <h1>TV SHOWS AND MORE</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae cupiditate provident reiciendis similique minus tenetur incidunt id praesentium, sint doloremque nesciunt veniam animi corporis. Ad dicta neque obcaecati dolore odit.</p>  
+            <p>Dikembangkan oleh <a href="https://portofolio-fanja.netlify.app/" target='_blank' rel='noopener noreferrer'>Muhammad Irfannurroja</a> menggunakan <a href="https://react.dev/" target='_blank' rel='noopener noreferrer'>React</a> dan Native CSS untuk menampilkan informasi film dari API <a href="https://developer.themoviedb.org/" target='_blank' rel='noopener noreferrer'>TheMovieDB</a>. Aplikasi ini memungkinkan pengguna mencari film, dan melihat daftar film populer, dengan desain yang responsif. Dibuat sebagai bagian dari portofolio, dengan referensi desain yang diambil dari <a href="https://www.figma.com/design/IKieVeQ53zbe89JPwkt2Qz/Movies-Watching-%26-Downloading-Website-Landing-Page-(Community)?node-id=0-1&p=f&t=vlTvSpBmJZqo2QjP-0" target='_blank' rel='noopener noreferrer'>Figma</a>.</p>  
             <div className="box-left-input">
               <img src={assets.search_icon} className='search-icon' alt="" />
               <input type="text" placeholder='Search Movies' onChange={({ target }) => {
@@ -220,12 +221,12 @@ const Main = () => {
         </div>
 
       {/* Heading Popular */}
-      <div className="heading" >
-        <div className="heading-title" id='popular'>
+      <div className="heading" id='popular' >
+        <div className="heading-title" >
           <img src={assets.trending_icon} alt="" />
           <h4>Popular</h4>
             <span className="divider"></span>
-          <p>See More</p>
+          <p><a href={import.meta.env.VITE_HREF} target='_blank' rel='noopener noreferrer'>See More</a></p>
         </div>
         </div>
        
@@ -243,12 +244,12 @@ const Main = () => {
         <div className="heading-title">
           <h4>Upcoming</h4>
             <span className="divider"></span>
-          <p>See More</p>
+          <p><a href={`${import.meta.env.VITE_HREF}/upcoming`} target='_blank' rel='noopener noreferrer'>See More</a></p>
         </div>
       </div>
 
       {/* Upcoming Section */}
-      <div className="cards-container" id='upcoming'>
+      <div className="cards-container">
         <div className="cards"  ref={gridRefUpcoming}>
         <UpcomingMovieList/>
         <button className='scroll-cards-left' onClick={scrollLeftUpcoming}><img src={assets.arrow_back_icon} alt="" /></button>

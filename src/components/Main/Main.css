@@ -14,6 +14,7 @@
     width: 90vw;
     color: white;
     align-items: center;
+    margin-top: 80px;
 }
 
 @media (max-width: 600px) {
@@ -30,11 +31,11 @@
 }
 
 .container .box-left {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-
 }
 
 .container .box-left h2 {
@@ -58,7 +59,22 @@
 .container .box-left p {
     width: 50vw;
     padding: 0 20px 20px 10px;
-    font-size: 22px;
+    font-size: 18px;
+    color: #CECECE;
+}
+
+.box-left p > a {
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.box-left p > a:hover {
+    color: #CECECE;
+}
+
+
+.box-left p > a:visited {
     color: #CECECE;
 }
 
@@ -80,6 +96,8 @@
     border: 1px solid;
     border-radius: 10px;
 }
+
+
 
 @media (max-width: 600px) {
     .container .box-left {
@@ -174,6 +192,17 @@
     font-style: italic;
 }
 
+@media (max-width: 600px) {
+    .list-search-table {
+        width: 266px;
+        left: 6%;
+        top: -16px;
+        background: transparent;
+        backdrop-filter: blur(10px);
+    }
+    
+}
+
 .container .box-right {
     position: relative;
     display: flex;
@@ -182,11 +211,6 @@
     justify-content: end;
     padding: 20px;
     padding-right: 0;
-}
-
-@media (max-width: 600px) {
-
-    
 }
 
 .container .box-right-image {
@@ -241,8 +265,14 @@
     margin-left: -10px;
 }
 
-.heading-title p {
+.heading-title p > a {
     font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.heading-title p > a:hover {
+    color: #CECECE;
 }
 
 .divider {
@@ -275,7 +305,6 @@
 .cards-container {
     display: flex;
     position: relative;
-    padding-bottom: 40px; 
   }
 
 .cards {
